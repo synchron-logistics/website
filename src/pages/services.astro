@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Services — Synchron Logistics">
+  <section class="bg-[#f5f5f5] py-32">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-4">OUR SERVICES</p>
+      <h1 class="font-heading font-bold uppercase text-6xl md:text-7xl text-[#0a0a0a] mb-6">COMPREHENSIVE SOLUTIONS</h1>
+      <p class="font-body text-gray-500 text-lg max-w-2xl mx-auto">
+        From drayage and intermodal to truckload transport and distribution, we deliver end-to-end logistics solutions tailored to your business.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          { title: 'Drayage + Intermodal', desc: 'Reliable and cost-effective ocean freight services for full container loads (FCL) and less than container loads (LCL).' },
+          { title: 'Truckload + Transport', desc: 'Flexible road transport solutions across the continent. Full truckload, less than truckload, and specialized transport.' },
+          { title: 'Distribution + Fulfillment', desc: 'State-of-the-art warehousing and distribution centers with advanced inventory management systems.' },
+          { title: 'Ocean Freight', desc: 'Global ocean freight solutions connecting your business to markets worldwide with reliability and efficiency.' },
+          { title: 'Air Freight', desc: 'Time-critical air freight services ensuring your cargo arrives on time, every time.' },
+          { title: 'Supply Chain Consulting', desc: 'Expert supply chain consulting to optimize your operations, reduce costs, and improve performance.' },
+        ].map(service => (
+          <div class="border border-gray-100 p-8 hover:border-[#e31937] transition-colors group">
+            <div class="w-8 h-0.5 bg-[#e31937] mb-6"></div>
+            <h3 class="font-heading font-bold text-2xl uppercase text-[#0a0a0a] mb-4">{service.title}</h3>
+            <p class="font-body text-gray-500 text-sm leading-relaxed">{service.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
