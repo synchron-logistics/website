@@ -1,11 +1,240 @@
 ---
+import Layout from '../layouts/Layout.astro';
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Synchron Logistics</title>
-  </head>
-  <body>
-    <h1>Coming soon</h1>
-  </body>
-</html>
+
+<Layout title="Synchron Logistics — Supply Chain Excellence">
+
+  <!-- HERO SECTION -->
+  <section
+    class="relative h-screen min-h-[600px] flex items-center"
+    style="background-image: url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920&q=80'); background-size: cover; background-position: center;"
+  >
+    <!-- Gradient overlay -->
+    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.6) 50%, rgba(10,10,10,0.1) 100%);"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+      <div class="max-w-2xl">
+        <!-- Heading -->
+        <h1 class="font-heading font-bold uppercase leading-none mb-4">
+          <span
+            class="block text-6xl md:text-8xl lg:text-9xl"
+            style="color: transparent; -webkit-text-stroke: 2px rgba(150,150,150,0.6);"
+          >
+            SUPPLY CHAIN
+          </span>
+          <span class="block text-6xl md:text-8xl lg:text-9xl text-white">
+            EXCELLENCE
+          </span>
+        </h1>
+
+        <!-- Subtext with red left border -->
+        <div class="flex items-stretch gap-4 mb-10 max-w-lg">
+          <div class="w-1 bg-[#e31937] flex-shrink-0"></div>
+          <p class="font-body text-white text-lg leading-relaxed">
+            We simplify your complex supply chain and execute with precision, 24/7/365.
+          </p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="/services"
+            class="font-heading font-bold uppercase tracking-widest text-sm px-8 py-4 bg-[#e31937] text-white hover:bg-red-700 transition-colors"
+          >
+            EXPLORE SOLUTIONS
+          </a>
+          <a
+            href="/contact"
+            class="font-heading font-bold uppercase tracking-widest text-sm px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-[#0a0a0a] transition-colors"
+          >
+            GET A QUOTE
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES SECTION -->
+  <section class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Top row -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
+        <div>
+          <h2 class="font-heading font-bold uppercase text-5xl md:text-6xl lg:text-7xl text-[#0a0a0a] leading-tight">
+            YES IS OUR<br />STARTING LINE
+          </h2>
+        </div>
+        <div class="flex items-end lg:justify-end">
+          <p class="font-body text-gray-400 text-base max-w-xs lg:text-right">
+            Your strategic partner throughout the supply chain.
+          </p>
+        </div>
+      </div>
+
+      <!-- Three columns -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- 01 -->
+        <div class="flex flex-col">
+          <div class="font-heading font-bold text-7xl text-[#e31937] mb-4">01</div>
+          <h3 class="font-heading font-bold text-2xl uppercase text-[#0a0a0a] mb-3">Custom Solutions</h3>
+          <p class="font-body text-gray-500 text-sm leading-relaxed mb-6 flex-1">
+            We embrace a good challenge and take pride in our innovative approach. Every solution is custom-built for your unique need.
+          </p>
+          <div class="h-0.5 bg-[#e31937] w-full"></div>
+        </div>
+
+        <!-- 02 -->
+        <div class="flex flex-col">
+          <div class="font-heading font-bold text-7xl text-gray-200 mb-4">02</div>
+          <h3 class="font-heading font-bold text-2xl uppercase text-[#0a0a0a] mb-3">Excellence in Execution</h3>
+          <p class="font-body text-gray-500 text-sm leading-relaxed mb-6 flex-1">
+            We deliver excellence in execution, technology, and capacity—driven by the best people in the industry.
+          </p>
+          <div class="h-0.5 bg-gray-200 w-full"></div>
+        </div>
+
+        <!-- 03 -->
+        <div class="flex flex-col">
+          <div class="font-heading font-bold text-7xl text-gray-200 mb-4">03</div>
+          <h3 class="font-heading font-bold text-2xl uppercase text-[#0a0a0a] mb-3">People Driven</h3>
+          <p class="font-body text-gray-500 text-sm leading-relaxed mb-6 flex-1">
+            Our people and culture drive our success. We take the time to build relationships with customers in ways that others don't.
+          </p>
+          <div class="h-0.5 bg-gray-200 w-full"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="bg-[#f5f5f5] py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-3">OUR SERVICES</p>
+        <h2 class="font-heading font-bold uppercase text-5xl md:text-6xl text-[#0a0a0a]">COMPREHENSIVE SOLUTIONS</h2>
+      </div>
+
+      <!-- Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Drayage + Intermodal -->
+        <div class="bg-white overflow-hidden group">
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1543946207-39bd91e70ca7?w=800&q=80"
+              alt="Drayage and Intermodal"
+              class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div class="absolute bottom-0 right-0 w-12 h-12 bg-[#e31937] flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 4.5H4.5A1.5 1.5 0 003 6v9a1.5 1.5 0 001.5 1.5h15A1.5 1.5 0 0021 15V6a1.5 1.5 0 00-1.5-1.5zM3 10.5h18M8.25 16.5v2.25M15.75 16.5v2.25"/>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-xl uppercase text-[#0a0a0a] mb-3">Drayage + Intermodal</h3>
+            <p class="font-body text-gray-500 text-sm leading-relaxed mb-5">Reliable and cost-effective ocean freight services for full container loads (FCL) and less than container loads (LCL).</p>
+            <a href="/services" class="font-heading font-bold text-xs tracking-widest uppercase text-[#e31937] flex items-center gap-2 hover:gap-3 transition-all">
+              READ MORE
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Truckload + Transport -->
+        <div class="bg-white overflow-hidden group">
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80"
+              alt="Truckload and Transport"
+              class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div class="absolute bottom-0 right-0 w-12 h-12 bg-[#e31937] flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-xl uppercase text-[#0a0a0a] mb-3">Truckload + Transport</h3>
+            <p class="font-body text-gray-500 text-sm leading-relaxed mb-5">Flexible road transport solutions across the continent. Full truckload, less than truckload, and specialized transport.</p>
+            <a href="/services" class="font-heading font-bold text-xs tracking-widest uppercase text-[#e31937] flex items-center gap-2 hover:gap-3 transition-all">
+              READ MORE
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Distribution + Fulfillment -->
+        <div class="bg-white overflow-hidden group">
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&q=80"
+              alt="Distribution and Fulfillment"
+              class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div class="absolute bottom-0 right-0 w-12 h-12 bg-[#e31937] flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-xl uppercase text-[#0a0a0a] mb-3">Distribution + Fulfillment</h3>
+            <p class="font-body text-gray-500 text-sm leading-relaxed mb-5">State-of-the-art warehousing and distribution centers with advanced inventory management systems.</p>
+            <a href="/services" class="font-heading font-bold text-xs tracking-widest uppercase text-[#e31937] flex items-center gap-2 hover:gap-3 transition-all">
+              READ MORE
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="bg-[#0a0a0a] py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="text-center">
+          <div class="font-heading font-bold text-5xl md:text-6xl text-white mb-3">99%<span class="text-[#e31937]">+</span></div>
+          <p class="font-body text-xs tracking-widest uppercase text-gray-500">ON-TIME DELIVERY</p>
+        </div>
+        <div class="text-center">
+          <div class="font-heading font-bold text-5xl md:text-6xl text-white mb-3">24/7</div>
+          <p class="font-body text-xs tracking-widest uppercase text-gray-500">DISPATCH + VISIBILITY</p>
+        </div>
+        <div class="text-center">
+          <div class="font-heading font-bold text-5xl md:text-6xl text-white mb-3">3.5M<span class="text-[#e31937]">+</span></div>
+          <p class="font-body text-xs tracking-widest uppercase text-gray-500">SQ FT WAREHOUSE</p>
+        </div>
+        <div class="text-center">
+          <div class="font-heading font-bold text-5xl md:text-6xl text-white mb-3">50K<span class="text-[#e31937]">+</span></div>
+          <p class="font-body text-xs tracking-widest uppercase text-gray-500">TRUCKLOADS / MONTH</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="bg-[#0a0a0a] py-24 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 flex justify-center">
+      <a
+        href="/contact"
+        class="font-heading font-bold uppercase tracking-widest text-sm px-16 py-5 border-2 border-white text-white hover:bg-white hover:text-[#0a0a0a] transition-colors"
+      >
+        CONTACT US
+      </a>
+    </div>
+  </section>
+
+</Layout>
