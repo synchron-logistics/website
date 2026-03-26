@@ -37,6 +37,27 @@ const {
       h1, h2, h3, h4, h5, h6 {
         font-family: 'Barlow Condensed', sans-serif;
       }
+
+      /* Nav scroll shadow */
+      #main-nav {
+        transition: box-shadow 0.3s ease;
+      }
+      #main-nav.nav-scrolled {
+        box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+      }
+
+      /* Scroll reveal */
+      @media (prefers-reduced-motion: no-preference) {
+        .reveal {
+          opacity: 0;
+          transform: translateY(40px);
+          transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+        }
+        .reveal.revealed {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     </style>
   </head>
   <body>
@@ -45,5 +66,82 @@ const {
       <slot />
     </main>
     <Footer />
+
+    <script>
+      // Nav scroll shadow
+      (function () {
+        const nav = document.getElementById('main-nav');
+        if (!nav) return;
+        window.addEventListener('scroll', function () {
+          if (window.scrollY > 80) {
+            nav.classList.add('nav-scrolled');
+          } else {
+            nav.classList.remove('nav-scrolled');
+          }
+        }, { passive: true });
+      })();
+
+      // Scroll reveal
+      (function () {
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReduced) return;
+        const revealEls = document.querySelectorAll('.reveal');
+        if (!revealEls.length) return;
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        revealEls.forEach(function (el) { observer.observe(el); });
+      })();
+
+      // Counter animation
+      (function () {
+        const statsSection = document.getElementById('stats-section');
+        if (!statsSection) return;
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function animateCounter(el: HTMLElement) {
+          const target = parseFloat(el.dataset.target || '0');
+          const isDecimal = el.dataset.decimal === 'true';
+          const duration = 2000;
+          const startTime = performance.now();
+
+          if (prefersReduced) {
+            el.textContent = isDecimal ? target.toFixed(1) : String(target);
+            return;
+          }
+
+          function update(now: number) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = eased * target;
+            el.textContent = isDecimal ? current.toFixed(1) : String(Math.floor(current));
+            if (progress < 1) {
+              requestAnimationFrame(update);
+            } else {
+              el.textContent = isDecimal ? target.toFixed(1) : String(target);
+            }
+          }
+
+          requestAnimationFrame(update);
+        }
+
+        const counterObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.querySelectorAll<HTMLElement>('[data-counter]').forEach(animateCounter);
+              counterObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+
+        counterObserver.observe(statsSection);
+      })();
+    </script>
   </body>
 </html>
