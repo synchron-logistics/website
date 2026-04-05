@@ -1,29 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { site } from '../../site.config.js';
 ---
 
-<Layout title="About Us — Synchron Logistics">
-  <section class="bg-white py-32">
+<Layout title={`About Us${site.seo.titleSuffix}`}>
+
+  <!-- PAGE HEADER -->
+  <section class="bg-[#0a0a0a] py-32">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-4">ABOUT US</p>
+      <h1 class="font-heading font-bold uppercase text-6xl md:text-7xl lg:text-8xl text-white leading-none mb-6">
+        WHO WE ARE
+      </h1>
+      <p class="font-body text-gray-400 text-lg max-w-xl leading-relaxed">
+        As an accredited IATA agent and FMC-registered NVOCC, Synchron Logistics delivers precision-driven freight solutions worldwide — from Kelowna, BC.
+      </p>
+    </div>
+  </section>
+
+  <!-- ORIGIN STORY -->
+  <section class="bg-white py-24 reveal">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
         <div>
-          <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-4">ABOUT US</p>
-          <h1 class="font-heading font-bold uppercase text-6xl md:text-7xl text-[#0a0a0a] leading-tight mb-6">
-            YES IS OUR<br />STARTING LINE
-          </h1>
-          <p class="font-body text-gray-500 text-lg leading-relaxed mb-6">
-            Since 2000, Synchron Logistics has been providing world-class logistics and supply chain solutions. We move your business forward with precision and reliability.
+          <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-4">OUR STORY</p>
+          <h2 class="font-heading font-bold uppercase text-5xl md:text-6xl text-[#0a0a0a] leading-tight mb-6">
+            BUILT ON<br />PURPOSE
+          </h2>
+          <p class="font-body text-gray-500 text-base leading-relaxed mb-4">
+            Synchron Logistics was founded in 2015 by professionals who came from the financial industry with a sharp eye for inefficiency. They saw a clear gap in international shipping — businesses were losing time, money, and competitive edge navigating a fragmented logistics market.
           </p>
           <p class="font-body text-gray-500 text-base leading-relaxed">
-            We embrace a good challenge and take pride in our innovative approach. Every solution is custom-built for your unique need — because we know that no two supply chains are exactly alike.
+            So they built a solution. Today, Synchron is one of the leading logistics companies in Western Canada, covering international freight forwarding, inland distribution, and comprehensive supply chain logistics support from our base in Kelowna, BC — a gateway to Asia Pacific through one of Canada's busiest airports and North America's third-busiest port.
           </p>
         </div>
+
+        <!-- Stats grid -->
         <div class="grid grid-cols-2 gap-6">
           {[
-            { number: '25+', label: 'Years of Experience' },
-            { number: '99%+', label: 'On-Time Delivery' },
-            { number: '50K+', label: 'Truckloads / Month' },
-            { number: '3.5M+', label: 'Sq Ft Warehouse' },
+            { number: '2015', label: 'Year Founded' },
+            { number: '1,000+', label: 'Partner Carriers' },
+            { number: '10', label: 'Industries Served' },
+            { number: '24/7/365', label: 'Service Availability' },
           ].map(stat => (
             <div class="bg-[#f5f5f5] p-8">
               <div class="font-heading font-bold text-4xl text-[#e31937] mb-2">{stat.number}</div>
@@ -31,25 +50,107 @@ import Layout from '../layouts/Layout.astro';
             </div>
           ))}
         </div>
+
       </div>
     </div>
   </section>
 
-  <section class="bg-[#0a0a0a] py-24">
+  <!-- VISION + MISSION -->
+  <section class="bg-[#0a0a0a] py-24 reveal">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        {[
-          { num: '01', title: 'Custom Solutions', body: 'We embrace a good challenge and take pride in our innovative approach. Every solution is custom-built for your unique need.' },
-          { num: '02', title: 'Excellence in Execution', body: 'We deliver excellence in execution, technology, and capacity—driven by the best people in the industry.' },
-          { num: '03', title: 'People Driven', body: 'Our people and culture drive our success. We take the time to build relationships with customers in ways that others don\'t.' },
-        ].map(item => (
-          <div>
-            <div class="font-heading font-bold text-6xl text-gray-700 mb-4">{item.num}</div>
-            <h3 class="font-heading font-bold text-2xl uppercase text-white mb-3">{item.title}</h3>
-            <p class="font-body text-gray-400 text-sm leading-relaxed">{item.body}</p>
-          </div>
-        ))}
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+
+        <!-- Vision -->
+        <div>
+          <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-4">VISION</p>
+          <h3 class="font-heading font-bold text-3xl uppercase text-white leading-tight mb-6">
+            MAKE THE IMPROBABLE POSSIBLE
+          </h3>
+          <p class="font-body text-gray-400 text-base leading-relaxed">
+            "To find challenging logistics solutions and make the improbable possible."
+          </p>
+          <p class="font-body text-gray-400 text-base leading-relaxed mt-4">
+            We thrive on complexity. The shipments others turn away, the routes others won't take, the timelines others call impossible — that's where Synchron gets to work.
+          </p>
+        </div>
+
+        <!-- Mission -->
+        <div>
+          <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-4">MISSION</p>
+          <blockquote class="border-l-4 border-[#e31937] pl-6 mb-6">
+            <p class="font-heading font-bold text-3xl uppercase text-white leading-tight">
+              "Driven by purpose.<br />Fueled by opportunity."
+            </p>
+          </blockquote>
+          <p class="font-body text-gray-400 text-base leading-relaxed">
+            Everything we do is focused on making our customers' business lives easier — helping them reduce logistics costs, shorten supply chain cycle times, and enable growth. We measure our success by theirs.
+          </p>
+        </div>
+
       </div>
     </div>
   </section>
+
+  <!-- COMPLIANCE -->
+  <section class="bg-[#f5f5f5] py-24 reveal">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <div>
+          <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-4">GOVERNANCE</p>
+          <h2 class="font-heading font-bold uppercase text-5xl md:text-6xl text-[#0a0a0a] leading-tight mb-6">
+            COMPREHENSIVE<br />COMPLIANCE
+          </h2>
+          <p class="font-body text-gray-500 text-base leading-relaxed mb-4">
+            Synchron operates a formal compliance management system covering fraud prevention, human rights, conflicts of interest, and antitrust. A Code of Conduct defines the values guiding daily operations.
+          </p>
+          <p class="font-body text-gray-500 text-base leading-relaxed">
+            For enterprise clients and regulated industries, this isn't just reassuring — it's a requirement. Our compliance framework is built to meet it.
+          </p>
+        </div>
+
+        <!-- Compliance pillars -->
+        <div class="grid grid-cols-2 gap-4">
+          {[
+            { title: 'Fraud Prevention', desc: 'Active measures to protect against fraudulent activity across all operations.' },
+            { title: 'Human Rights', desc: 'Commitment to ethical labour practices throughout our network.' },
+            { title: 'Conflicts of Interest', desc: 'Clear policies ensuring decisions are made in the best interest of clients.' },
+            { title: 'Antitrust', desc: 'Full compliance with competition laws in every market we operate in.' },
+          ].map(item => (
+            <div class="bg-white p-6 border border-gray-100">
+              <div class="w-6 h-0.5 bg-[#e31937] mb-4"></div>
+              <h4 class="font-heading font-bold text-base uppercase text-[#0a0a0a] mb-2">{item.title}</h4>
+              <p class="font-body text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="bg-[#0a0a0a] py-20 reveal">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-4">ACCREDITATIONS</p>
+          <h2 class="font-heading font-bold uppercase text-4xl md:text-5xl text-white leading-tight">
+            CERTIFIED TO<br />MOVE YOUR FREIGHT
+          </h2>
+        </div>
+        <div class="flex flex-col gap-6">
+          <div class="border-l-2 border-[#e31937] pl-6">
+            <h4 class="font-heading font-bold text-lg uppercase text-white mb-1">IATA Accredited Agent</h4>
+            <p class="font-body text-gray-400 text-sm leading-relaxed">Full accreditation from the International Air Transport Association, enabling us to handle air freight documentation and cargo directly through IATA-member airlines.</p>
+          </div>
+          <div class="border-l-2 border-[#e31937] pl-6">
+            <h4 class="font-heading font-bold text-lg uppercase text-white mb-1">FMC-Registered NVOCC</h4>
+            <p class="font-body text-gray-400 text-sm leading-relaxed">Registered with the US Federal Maritime Commission as a Non-Vessel Operating Common Carrier — authorizing us to issue bills of lading and manage ocean freight on behalf of our clients.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </Layout>

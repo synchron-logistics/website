@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { site } from '../../site.config.js';
 ---
 
-<Layout title="Synchron Logistics — Supply Chain Excellence">
+<Layout title={site.seo.defaultTitle} description={site.seo.defaultDescription}>
 
   <!-- HERO SECTION -->
   <section
@@ -10,20 +11,25 @@ import Layout from '../layouts/Layout.astro';
     style="background-image: url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=1920&q=80'); background-size: cover; background-position: center;"
   >
     <!-- Gradient overlay -->
-    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.6) 50%, rgba(10,10,10,0.1) 100%);"></div>
+    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(10,10,10,0.88) 0%, rgba(10,10,10,0.65) 50%, rgba(10,10,10,0.15) 100%);"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
       <div class="max-w-2xl hero-float" id="hero-content">
+        <!-- Eyebrow -->
+        <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-4 hero-eyebrow">
+          INTERNATIONAL FREIGHT & LOGISTICS
+        </p>
+
         <!-- Heading -->
         <h1 class="font-heading font-bold uppercase leading-none mb-4">
           <span
-            class="block text-6xl md:text-8xl lg:text-9xl hero-supply-chain"
-            style="color: transparent; -webkit-text-stroke: 2px rgba(150,150,150,0.6);"
+            class="block text-6xl md:text-8xl lg:text-9xl hero-line-1"
+            style="color: transparent; -webkit-text-stroke: 2px rgba(255,255,255,0.75);"
           >
-            SUPPLY CHAIN
+            GLOBAL
           </span>
-          <span class="block text-6xl md:text-8xl lg:text-9xl text-white hero-excellence">
-            EXCELLENCE
+          <span class="block text-6xl md:text-8xl lg:text-9xl text-white hero-line-2">
+            REACH.
           </span>
         </h1>
 
@@ -31,7 +37,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="flex items-stretch gap-4 mb-10 max-w-lg hero-subtext">
           <div class="w-1 bg-[#e31937] flex-shrink-0"></div>
           <p class="font-body text-white text-lg leading-relaxed">
-            We simplify your complex supply chain and execute with precision, 24/7/365.
+            Full-service freight forwarding, inland distribution, and supply chain logistics. 24/7/365.
           </p>
         </div>
 
@@ -41,7 +47,7 @@ import Layout from '../layouts/Layout.astro';
             href="/services"
             class="font-heading font-bold uppercase tracking-widest text-sm px-8 py-4 bg-[#e31937] text-white hover:bg-[#c41530] hover:scale-[1.02] transition-all duration-200"
           >
-            EXPLORE SOLUTIONS
+            OUR SERVICES
           </a>
           <a
             href="/contact"
@@ -54,54 +60,70 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- VALUES SECTION -->
-  <section class="bg-white py-24 reveal">
+  <!-- ASIA PACIFIC DIFFERENTIATOR STRIP -->
+  <section class="bg-[#0a0a0a] border-t border-gray-800 py-14 reveal">
     <div class="max-w-7xl mx-auto px-6">
-      <!-- Top row -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div>
-          <h2 class="font-heading font-bold uppercase text-5xl md:text-6xl lg:text-7xl text-[#0a0a0a] leading-tight">
-            YES IS OUR<br />STARTING LINE
+          <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-3">LOCATION ADVANTAGE</p>
+          <h2 class="font-heading font-bold text-4xl md:text-5xl text-white uppercase leading-tight">
+            Gateway to<br />Asia Pacific
           </h2>
         </div>
-        <div class="flex items-end lg:justify-end">
-          <p class="font-body text-gray-400 text-base max-w-xs lg:text-right">
-            Your strategic partner throughout the supply chain.
-          </p>
+        <div class="grid grid-cols-2 gap-6">
+          <div class="border-l-2 border-[#e31937] pl-5">
+            <div class="font-heading font-bold text-4xl text-white mb-1">2nd</div>
+            <p class="font-body text-gray-400 text-sm leading-snug">Busiest Airport<br />in Canada</p>
+          </div>
+          <div class="border-l-2 border-[#e31937] pl-5">
+            <div class="font-heading font-bold text-4xl text-white mb-1">Largest</div>
+            <p class="font-body text-gray-400 text-sm leading-snug">Port<br />in Canada</p>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Three columns -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- 01 — default active state -->
-        <div class="flex flex-col value-col">
-          <div class="font-heading font-bold text-7xl mb-4 value-number">01</div>
-          <h3 class="font-heading font-bold text-2xl uppercase text-[#0a0a0a] mb-3">Custom Solutions</h3>
-          <p class="font-body text-gray-500 text-sm leading-relaxed mb-6 flex-1">
-            We embrace a good challenge and take pride in our innovative approach. Every solution is custom-built for your unique need.
+  <!-- ABOUT / MISSION SECTION -->
+  <section class="bg-white py-24 reveal">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+        <!-- Left: Origin story -->
+        <div>
+          <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-4">WHO WE ARE</p>
+          <h2 class="font-heading font-bold uppercase text-5xl md:text-6xl text-[#0a0a0a] leading-tight mb-6">
+            BUILT FROM<br />EXPERIENCE
+          </h2>
+          <p class="font-body text-gray-500 text-base leading-relaxed mb-4">
+            Founded in 2015 by professionals with backgrounds in the financial industry, Synchron Logistics was built on a simple insight: the gap in international shipping was costing businesses time and money.
           </p>
-          <div class="value-line"></div>
+          <p class="font-body text-gray-500 text-base leading-relaxed">
+            Today, we're one of the leading companies in global logistics — covering international freight forwarding, inland distribution, and complete supply chain logistics support from our base in Kelowna, BC.
+          </p>
         </div>
 
-        <!-- 02 -->
-        <div class="flex flex-col value-col">
-          <div class="font-heading font-bold text-7xl mb-4 value-number">02</div>
-          <h3 class="font-heading font-bold text-2xl uppercase text-[#0a0a0a] mb-3">Excellence in Execution</h3>
-          <p class="font-body text-gray-500 text-sm leading-relaxed mb-6 flex-1">
-            We deliver excellence in execution, technology, and capacity—driven by the best people in the industry.
+        <!-- Right: Mission callout -->
+        <div class="flex flex-col gap-8 lg:pt-14">
+          <div class="border-l-4 border-[#e31937] pl-6">
+            <p class="font-heading font-bold text-2xl md:text-3xl text-[#0a0a0a] leading-snug">
+              "Driven by purpose.<br />Fueled by opportunity."
+            </p>
+          </div>
+          <p class="font-body text-gray-500 text-base leading-relaxed">
+            Everything we do is focused on making our customers' business lives easier — helping them reduce logistics costs, shorten supply chain cycle times, and enable growth.
           </p>
-          <div class="value-line"></div>
+          <a
+            href="/about"
+            class="read-more-link font-heading font-bold text-xs tracking-widest uppercase text-[#e31937] flex items-center gap-2 self-start"
+          >
+            OUR STORY
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
         </div>
 
-        <!-- 03 -->
-        <div class="flex flex-col value-col">
-          <div class="font-heading font-bold text-7xl mb-4 value-number">03</div>
-          <h3 class="font-heading font-bold text-2xl uppercase text-[#0a0a0a] mb-3">People Driven</h3>
-          <p class="font-body text-gray-500 text-sm leading-relaxed mb-6 flex-1">
-            Our people and culture drive our success. We take the time to build relationships with customers in ways that others don't.
-          </p>
-          <div class="value-line"></div>
-        </div>
       </div>
     </div>
   </section>
@@ -112,23 +134,23 @@ import Layout from '../layouts/Layout.astro';
       <!-- Header -->
       <div class="text-center mb-16">
         <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-3">OUR SERVICES</p>
-        <h2 class="font-heading font-bold uppercase text-5xl md:text-6xl text-[#0a0a0a]">COMPREHENSIVE SOLUTIONS</h2>
+        <h2 class="font-heading font-bold uppercase text-5xl md:text-6xl text-[#0a0a0a]">END-TO-END SOLUTIONS</h2>
       </div>
 
       <!-- Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Drayage + Intermodal -->
+        <!-- International Freight -->
         <div class="bg-white overflow-hidden service-card">
           <div class="relative service-img-wrap">
             <img
-              src="https://images.unsplash.com/photo-1543946207-39bd91e70ca7?w=800&q=80"
-              alt="Drayage and Intermodal"
+              src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800&q=80"
+              alt="International freight — air and ocean"
               class="w-full h-56 object-cover"
               loading="lazy"
             />
             <div class="absolute bottom-0 right-0 w-12 h-12 bg-[#e31937] flex items-center justify-center" style="z-index:1;">
               <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 4.5H4.5A1.5 1.5 0 003 6v9a1.5 1.5 0 001.5 1.5h15A1.5 1.5 0 0021 15V6a1.5 1.5 0 00-1.5-1.5zM3 10.5h18M8.25 16.5v2.25M15.75 16.5v2.25"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
               </svg>
             </div>
             <div class="service-overlay">
@@ -136,8 +158,8 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           <div class="p-6">
-            <h3 class="font-heading font-bold text-xl uppercase text-[#0a0a0a] mb-3">Drayage + Intermodal</h3>
-            <p class="font-body text-gray-500 text-sm leading-relaxed mb-5">Reliable and cost-effective ocean freight services for full container loads (FCL) and less than container loads (LCL).</p>
+            <h3 class="font-heading font-bold text-xl uppercase text-[#0a0a0a] mb-3">International Freight</h3>
+            <p class="font-body text-gray-500 text-sm leading-relaxed mb-5">IATA-accredited air freight and FMC-registered ocean freight. FCL, LCL, direct and deferred options — worldwide reach.</p>
             <a href="/services" class="read-more-link font-heading font-bold text-xs tracking-widest uppercase text-[#e31937] flex items-center gap-2">
               READ MORE
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -147,12 +169,12 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- Truckload + Transport -->
+        <!-- Domestic Transportation -->
         <div class="bg-white overflow-hidden service-card">
           <div class="relative service-img-wrap">
             <img
               src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80"
-              alt="Truckload and Transport"
+              alt="Road transportation and drayage"
               class="w-full h-56 object-cover"
               loading="lazy"
             />
@@ -166,8 +188,8 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           <div class="p-6">
-            <h3 class="font-heading font-bold text-xl uppercase text-[#0a0a0a] mb-3">Truckload + Transport</h3>
-            <p class="font-body text-gray-500 text-sm leading-relaxed mb-5">Flexible road transport solutions across the continent. Full truckload, less than truckload, and specialized transport.</p>
+            <h3 class="font-heading font-bold text-xl uppercase text-[#0a0a0a] mb-3">Domestic Transportation</h3>
+            <p class="font-body text-gray-500 text-sm leading-relaxed mb-5">FTL and LTL coast to coast. Cross-border Canada/USA. Drayage within a 200-mile radius and port-to-rail container movement.</p>
             <a href="/services" class="read-more-link font-heading font-bold text-xs tracking-widest uppercase text-[#e31937] flex items-center gap-2">
               READ MORE
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -177,12 +199,12 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- Distribution + Fulfillment -->
+        <!-- Warehousing & Distribution -->
         <div class="bg-white overflow-hidden service-card">
           <div class="relative service-img-wrap">
             <img
               src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&q=80"
-              alt="Distribution and Fulfillment"
+              alt="Warehousing and distribution"
               class="w-full h-56 object-cover"
               loading="lazy"
             />
@@ -196,8 +218,8 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
           <div class="p-6">
-            <h3 class="font-heading font-bold text-xl uppercase text-[#0a0a0a] mb-3">Distribution + Fulfillment</h3>
-            <p class="font-body text-gray-500 text-sm leading-relaxed mb-5">State-of-the-art warehousing and distribution centers with advanced inventory management systems.</p>
+            <h3 class="font-heading font-bold text-xl uppercase text-[#0a0a0a] mb-3">Warehousing & Distribution</h3>
+            <p class="font-body text-gray-500 text-sm leading-relaxed mb-5">Bonded and non-bonded facilities across Canada and the US. Trans-load, cross-docking, and e-commerce order fulfillment.</p>
             <a href="/services" class="read-more-link font-heading font-bold text-xs tracking-widest uppercase text-[#e31937] flex items-center gap-2">
               READ MORE
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -207,47 +229,55 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
       </div>
+
+      <div class="text-center mt-12">
+        <a href="/services" class="font-heading font-bold uppercase tracking-widest text-sm px-8 py-4 border-2 border-[#0a0a0a] text-[#0a0a0a] hover:bg-[#0a0a0a] hover:text-white transition-all duration-200">
+          VIEW ALL SERVICES
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- STATS BAR -->
+  <!-- STATS / CREDIBILITY BAR -->
   <section class="bg-[#0a0a0a] py-20 reveal" id="stats-section">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
         <div class="text-center">
           <div class="font-heading font-bold text-5xl md:text-6xl text-white mb-3">
-            <span data-counter data-target="99">99</span>%<span class="text-[#e31937]">+</span>
+            2015
           </div>
-          <p class="font-body text-xs tracking-widest uppercase text-gray-500">ON-TIME DELIVERY</p>
+          <p class="font-body text-xs tracking-widest uppercase text-gray-500">YEAR FOUNDED</p>
         </div>
         <div class="text-center">
           <div class="font-heading font-bold text-5xl md:text-6xl text-white mb-3">
-            <span data-counter data-target="24">24</span>/7
+            <span data-counter data-target="1000">1,000</span><span class="text-[#e31937]">+</span>
           </div>
-          <p class="font-body text-xs tracking-widest uppercase text-gray-500">DISPATCH + VISIBILITY</p>
+          <p class="font-body text-xs tracking-widest uppercase text-gray-500">PARTNER CARRIERS</p>
         </div>
         <div class="text-center">
           <div class="font-heading font-bold text-5xl md:text-6xl text-white mb-3">
-            <span data-counter data-target="3.5" data-decimal="true">3.5</span>M<span class="text-[#e31937]">+</span>
+            <span data-counter data-target="10">10</span>
           </div>
-          <p class="font-body text-xs tracking-widest uppercase text-gray-500">SQ FT WAREHOUSE</p>
+          <p class="font-body text-xs tracking-widest uppercase text-gray-500">INDUSTRIES SERVED</p>
         </div>
         <div class="text-center">
           <div class="font-heading font-bold text-5xl md:text-6xl text-white mb-3">
-            <span data-counter data-target="50">50</span>K<span class="text-[#e31937]">+</span>
+            24/7
           </div>
-          <p class="font-body text-xs tracking-widest uppercase text-gray-500">TRUCKLOADS / MONTH</p>
+          <p class="font-body text-xs tracking-widest uppercase text-gray-500">365 SERVICE</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA SECTION -->
-  <section class="bg-[#0a0a0a] py-24 border-t border-gray-800 reveal">
-    <div class="max-w-7xl mx-auto px-6 flex justify-center">
+  <section class="bg-[#e31937] py-24 reveal">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="font-heading font-bold text-sm tracking-widest uppercase text-white/60 mb-4">READY TO MOVE?</p>
+      <h2 class="font-heading font-bold uppercase text-4xl md:text-5xl text-white mb-10">LET'S BUILD YOUR SOLUTION</h2>
       <a
         href="/contact"
-        class="font-heading font-bold uppercase tracking-widest text-sm px-16 py-5 border-2 border-white text-white hover:bg-white hover:text-[#0a0a0a] transition-all duration-200"
+        class="font-heading font-bold uppercase tracking-widest text-sm px-16 py-5 border-2 border-white text-white hover:bg-white hover:text-[#e31937] transition-all duration-200"
       >
         CONTACT US
       </a>
@@ -271,48 +301,24 @@ import Layout from '../layouts/Layout.astro';
       50%       { transform: translateY(-8px); }
     }
 
-    .hero-supply-chain {
-      animation: fadeSlideUp 0.8s ease-out 0.1s both;
+    .hero-eyebrow {
+      animation: fadeSlideUp 0.7s ease-out 0.0s both;
     }
-    .hero-excellence {
-      animation: fadeSlideUp 0.8s ease-out 0.3s both;
+    .hero-line-1 {
+      animation: fadeSlideUp 0.8s ease-out 0.15s both;
+    }
+    .hero-line-2 {
+      animation: fadeSlideUp 0.8s ease-out 0.35s both;
     }
     .hero-subtext {
-      animation: fadeSlideUp 0.7s ease-out 0.5s both;
+      animation: fadeSlideUp 0.7s ease-out 0.55s both;
     }
     .hero-buttons {
-      animation: fadeSlideUp 0.7s ease-out 0.7s both;
+      animation: fadeSlideUp 0.7s ease-out 0.75s both;
     }
     .hero-float {
       animation: float 6s ease-in-out 1.5s infinite;
     }
-  }
-
-  /* =============================================
-     VALUES — NUMBER & LINE HOVER
-  ============================================= */
-  .value-col {
-    cursor: pointer;
-  }
-
-  .value-number {
-    color: #d1d5db;
-    transition: color 0.3s ease;
-  }
-  .value-col-active .value-number,
-  .value-col:hover .value-number {
-    color: #e31937;
-  }
-
-  .value-line {
-    height: 2px;
-    background-color: #e31937;
-    width: 0%;
-    transition: width 0.4s ease-out;
-  }
-  .value-col-active .value-line,
-  .value-col:hover .value-line {
-    width: 100%;
   }
 
   /* =============================================

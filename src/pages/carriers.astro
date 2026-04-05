@@ -1,0 +1,180 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { site } from '../../site.config.js';
+
+const { emails } = site;
+
+// TODO: Client to provide carrier application link or form
+// requirements before the "Apply to Become a Carrier" CTA goes live
+---
+
+<Layout title={`Carriers${site.seo.titleSuffix}`}>
+
+  <!-- HERO -->
+  <section
+    class="relative bg-[#0a0a0a] py-32"
+    style="background-image: url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80'); background-size: cover; background-position: center;"
+  >
+    <div class="absolute inset-0" style="background: rgba(10,10,10,0.85);"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
+      <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-4">CARRIER PARTNERSHIPS</p>
+      <h1 class="font-heading font-bold uppercase text-6xl md:text-7xl lg:text-8xl text-white leading-none mb-6">
+        PARTNER WITH<br />SYNCHRON
+      </h1>
+      <p class="font-body text-white/80 text-lg max-w-xl leading-relaxed">
+        Without our carriers, we don't exist. We treat every carrier with the same respect we give our customers.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHY PARTNER WITH US -->
+  <section class="bg-white py-24 reveal">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <div>
+          <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-4">WHY SYNCHRON</p>
+          <h2 class="font-heading font-bold uppercase text-5xl md:text-6xl text-[#0a0a0a] leading-tight mb-6">
+            BUILT FOR<br />CARRIERS
+          </h2>
+          <p class="font-body text-gray-500 text-base leading-relaxed">
+            We've built our operations around making it easy for carriers to do their best work. No runaround, no delays, no guesswork — just clear communication, reliable loads, and fast pay.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          {[
+            { title: 'Reliable & Consistent Communication', desc: 'You always know who to call and what to expect. No surprises.' },
+            { title: 'Easy-to-Use GPS Tracking', desc: 'Simple, modern tracking tools that fit your workflow.' },
+            { title: 'Friendly and Professional Team', desc: 'A team that respects your time and treats you like a partner.' },
+            { title: 'Dedicated Load Board Access, 24/7', desc: 'Find loads when you need them, around the clock.' },
+            { title: 'Competitive Rates & Strong Partnerships', desc: 'Fair rates and a relationship built to last.' },
+          ].map(item => (
+            <div class="flex items-start gap-4 p-5 border border-gray-100 hover:border-[#e31937] transition-colors">
+              <div class="w-1.5 h-1.5 bg-[#e31937] rounded-full flex-shrink-0 mt-2"></div>
+              <div>
+                <h3 class="font-heading font-bold text-base uppercase text-[#0a0a0a] mb-1">{item.title}</h3>
+                <p class="font-body text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- OWNER-OPERATORS -->
+  <section class="bg-[#0a0a0a] py-24 reveal">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+        <div>
+          <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-4">OWNER-OPERATORS</p>
+          <h2 class="font-heading font-bold uppercase text-5xl md:text-6xl text-white leading-tight mb-6">
+            DRIVE ON<br />YOUR TERMS
+          </h2>
+          <p class="font-body text-gray-400 text-base leading-relaxed mb-4">
+            Direct access to our load board 24/7. Choose what and when to haul. Find back-to-back loads and build full-week runs.
+          </p>
+          <p class="font-body text-gray-400 text-base leading-relaxed">
+            We make it easy so you can focus on driving.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6">
+          {[
+            { stat: '24/7', label: 'Load board access' },
+            { stat: '1,000+', label: 'Active partner carriers' },
+            { stat: 'Every\nFriday', label: 'Quick pay via TrustPay' },
+          ].map(item => (
+            <div class="border-l-4 border-[#e31937] pl-6 py-2">
+              <div class="font-heading font-bold text-3xl text-white whitespace-pre-line">{item.stat}</div>
+              <p class="font-body text-gray-500 text-sm uppercase tracking-wide mt-1">{item.label}</p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PAYMENT TERMS -->
+  <section class="bg-[#f5f5f5] py-24 reveal">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+        <div>
+          <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-4">PAYMENT</p>
+          <h2 class="font-heading font-bold uppercase text-5xl md:text-6xl text-[#0a0a0a] leading-tight mb-6">
+            FAST,<br />RELIABLE PAY
+          </h2>
+          <p class="font-body text-gray-500 text-base leading-relaxed mb-4">
+            We offer quick pay every Friday through TrustPay at 1.75%. Submit all paperwork by Thursday at 2:00 PM.
+          </p>
+          <p class="font-body text-gray-500 text-base leading-relaxed mb-6">
+            Send documents to{' '}
+            <a href={`mailto:${emails.accounting}`} class="text-[#e31937] hover:underline">{emails.accounting}</a>.
+          </p>
+
+          <div class="bg-white border border-gray-200 p-6 flex flex-col gap-3">
+            <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+              <span class="font-body text-sm text-gray-500">Pay Day</span>
+              <span class="font-heading font-bold text-base uppercase text-[#0a0a0a]">Every Friday</span>
+            </div>
+            <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+              <span class="font-body text-sm text-gray-500">Quick Pay Rate</span>
+              <span class="font-heading font-bold text-base uppercase text-[#0a0a0a]">1.75% via TrustPay</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="font-body text-sm text-gray-500">Paperwork Deadline</span>
+              <span class="font-heading font-bold text-base uppercase text-[#0a0a0a]">Thursday 2:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- What we look for -->
+        <div>
+          <p class="font-heading font-bold text-sm tracking-widest uppercase text-[#e31937] mb-4">CARRIER STANDARDS</p>
+          <h2 class="font-heading font-bold uppercase text-4xl text-[#0a0a0a] leading-tight mb-8">
+            WHAT WE<br />LOOK FOR
+          </h2>
+          <div class="flex flex-col gap-4">
+            {[
+              { title: 'Good Safety Ratings', desc: 'We maintain a high-performance carrier network. Safety is non-negotiable.' },
+              { title: 'Longevity in the Business', desc: 'Experience matters. We partner with carriers who know the road.' },
+              { title: 'Reliable & Consistent Communication', desc: 'Responsiveness builds trust. We expect the same standards we hold ourselves to.' },
+            ].map((item, i) => (
+              <div class="flex items-start gap-5 bg-white p-6 border border-gray-100">
+                <div class="font-heading font-bold text-3xl text-gray-200 flex-shrink-0">0{i + 1}</div>
+                <div>
+                  <h3 class="font-heading font-bold text-base uppercase text-[#0a0a0a] mb-1">{item.title}</h3>
+                  <p class="font-body text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA — APPLY -->
+  <section class="bg-[#e31937] py-20">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div>
+        <h2 class="font-heading font-bold uppercase text-4xl md:text-5xl text-white leading-tight">READY TO PARTNER?</h2>
+        <p class="font-body text-white/80 text-base mt-2">Join our network of 1,000+ trusted carriers.</p>
+      </div>
+      <!-- TODO: Replace '#' with carrier application link or form URL once client provides it -->
+      <a
+        href="#"
+        class="font-heading font-bold uppercase tracking-widest text-sm px-10 py-4 border-2 border-white text-white hover:bg-white hover:text-[#e31937] transition-all duration-200 flex-shrink-0"
+      >
+        APPLY TO BECOME A CARRIER
+      </a>
+    </div>
+  </section>
+
+</Layout>
