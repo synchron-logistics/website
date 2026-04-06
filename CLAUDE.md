@@ -47,11 +47,13 @@ Controlled via `modules` export in `site.config.js`:
 | Module | Status | Notes |
 |---|---|---|
 | `contactForm` | Active | UI built; Resend backend not yet wired |
+| `carriers` | Active | `/carriers` page built; apply link pending from client |
+| `tracking` | Active | UI placeholder — portal URL pending from client |
+| `industries` | Active | Industries grid on `/services` page |
 | `blog` | Off | Not needed for this client |
 | `gallery` | Off | Not needed for this client |
 | `testimonials` | Off | Not needed for this client |
 | `cms` | Off | Static site only |
-| `tracking` | Active | UI placeholder only — no real tracking backend |
 
 ---
 
@@ -59,23 +61,26 @@ Controlled via `modules` export in `site.config.js`:
 
 | Route | File | Status |
 |---|---|---|
-| `/` | `src/pages/index.astro` | Built — hero, values, services, stats, CTA |
-| `/about` | `src/pages/about.astro` | Built — partial (needs real content) |
-| `/services` | `src/pages/services.astro` | Built — partial (needs real content) |
-| `/contact` | `src/pages/contact.astro` | Built — form UI only, no backend |
-| `/tracking` | `src/pages/tracking.astro` | Built — UI placeholder only |
+| `/` | `src/pages/index.astro` | Built — hero, Asia Pacific strip, origin/mission, services, stats, red CTA |
+| `/about` | `src/pages/about.astro` | Built — origin story, vision, mission, compliance, IATA/FMC accreditations |
+| `/services` | `src/pages/services.astro` | Built — alternating split layout, 4 groups, real images, industries grid |
+| `/contact` | `src/pages/contact.astro` | Built — form UI with inquiry type routing; Resend backend pending |
+| `/tracking` | `src/pages/tracking.astro` | Built — honest placeholder; portal URL pending from client |
+| `/carriers` | `src/pages/carriers.astro` | Built — full carrier partnership page; apply link pending from client |
 
 ---
 
 ## Current Build Status
 
 - Design system established (tokens, fonts, component patterns)
-- All 5 pages scaffolded with layout and visual design
-- Animations implemented (scroll reveal, hero stagger, counters, hover states)
-- Nav and Footer built and responsive
-- All hardcoded business details refactored into `site.config.js`
-- Contact form: UI complete, Resend integration pending
-- Placeholder content throughout (address, phone, stats) — needs client confirmation
+- All 6 pages built with real content and layout
+- `.gitignore` in place — node_modules and build artifacts excluded
+- Animations: scroll reveal, hero stagger, counter (1000 and 10 only), hover states
+- Nav and Footer built, responsive, null-safe for missing phone/address
+- All business details in `site.config.js` — no hardcoded strings in components
+- Services page: full alternating split layout with 4 real client images
+- Contact form: UI complete with inquiry type dropdown; Resend backend not yet built
+- Missing from client: phone, street address, postal code, social URLs, carrier apply link, tracking portal URL
 
 ---
 
@@ -97,7 +102,7 @@ Controlled via `modules` export in `site.config.js`:
 
 8. **Do not create new files unnecessarily.** Prefer editing existing components to adding new ones.
 
-9. **Confirm real client details before launch.** Phone, address, email, social links, and stats in `site.config.js` are placeholders. Flag any use of placeholder data in PRs.
+9. **Confirm real client details before launch.** Phone, street address, postal code, and social links in `site.config.js` are still `null` / `#` placeholders — all marked with `// TODO: MISSING`. Stats (2015, 1,000+, 10 industries, 24/7/365) are confirmed real values. Flag any remaining placeholder data before merging to production.
 
 10. **This is a template foundation.** Any pattern established here should be documented in `CONVENTIONS.md`. If a pattern is one-off and not reusable, note that explicitly.
 
