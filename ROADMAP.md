@@ -27,7 +27,7 @@ Build status for the Synchron Logistics website.
 - [x] `Footer.astro` — 4-column layout. Credentials line (IATA/FMC). Null-safe for missing phone/address.
 
 ### Pages
-- [x] `index.astro` — Hero (global reach, white-stroke outline), Asia Pacific differentiator strip (2nd busiest airport / Largest port in Canada), Origin/Mission section, Services (3 cards), Stats bar (2015 static / 1,000+ / 10 / 24/7), Red CTA
+- [x] `index.astro` — Hero ("Supply Chain Excellence", white-stroke outline headline, background image from /public/images/), Asia Pacific differentiator strip — 3-column layout (headline left, two stats side-by-side right; stacks to left-aligned column on mobile), Origin/Mission section, Services (3 cards — Unsplash placeholders), Stats bar (2015 static / 1,000+ / 10 / 24/7), Red CTA
 - [x] `about.astro` — Page header (IATA/FMC in intro), Origin story, Vision + Mission, Compliance section, Accreditations section
 - [x] `services.astro` — Page header, 4-group alternating split layout (image + content, full-bleed), real client images wired, Industries We Serve grid (10 industries, 5-col), CTA
 - [x] `contact.astro` — Contact info (null-safe), Quote form with inquiry type dropdown (email routing comments in place)
@@ -36,6 +36,7 @@ Build status for the Synchron Logistics website.
 
 ### Images
 - [x] `/public/images/` directory created
+- [x] `synchron-logistics-supply-chain-excellence.jpg` — hero background image
 - [x] `synchron-logistics-domestic-freight.jpg` — wired to Group 01
 - [x] `synchron-logistics-international-freight.jpg` — wired to Group 02
 - [x] `synchron-logistics-warehouse-distribution.jpg` — wired to Group 03
@@ -55,6 +56,10 @@ Build status for the Synchron Logistics website.
 - [x] Stats: 2015 (static) / 1,000+ carriers / 10 industries / 24/7/365
 - [x] Asia Pacific stats: 2nd busiest airport in Canada / Largest port in Canada
 - [x] Gateway section stat styling — all white on "2nd" and "Largest", no red on stats
+- [x] Gateway section layout — redesigned to 3-column grid (headline / stat 1 / stat 2); stats side-by-side on mobile, left-aligned column stack
+- [x] Hero headline — "SUPPLY CHAIN" (outline) / "EXCELLENCE." (solid white)
+- [x] Hero CTA — updated from "OUR SERVICES" to "EXPLORE SERVICES"
+- [x] Hero background image — moved to `/public/images/synchron-logistics-supply-chain-excellence.jpg`
 - [x] Email routing: general / sales / accounting in site.config.js
 - [x] IATA and FMC/NVOCC credentials: About page copy, About accreditations section, footer bottom bar
 - [x] Mission: "Driven by purpose. Fueled by opportunity."
@@ -84,7 +89,7 @@ Build status for the Synchron Logistics website.
 - [ ] Social media URLs — update `site.social` in site.config.js
 - [ ] Carrier application form/link — update `/carriers` CTA `href`
 - [ ] Tracking portal URL — update `tracking.astro` with real login link or embed
-- [ ] Homepage services section — currently uses Unsplash placeholder images; replace with client assets
+- [ ] **Homepage services section** — 3 cards still use Unsplash placeholder images; replace with client assets
 
 ### Features to build
 - [ ] Resend contact form backend (`src/pages/api/contact.ts`)
